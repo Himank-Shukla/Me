@@ -1,0 +1,131 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  
+  ul[class], ol[class] {
+    padding: 0;
+  }
+  
+  
+  body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+  }
+  
+  
+  body {
+    scroll-behavior: smooth;
+    line-height: 1.5;
+  }
+  
+  
+  ul[class], ol[class] {
+    list-style: none;
+  }
+  
+  
+  a {
+    cursor: pointer;
+  }
+  
+  a:not([class]) {
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+  }
+  
+  
+  img {
+    max-width: 100%;
+    display: block;
+  }
+  
+  
+  article>*+* {
+    margin-top: 1em;
+  }
+  
+  
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+    
+  :root {
+    --bg: tomato;
+    --fg: white;
+  }
+  
+  ::selection {
+    color: black;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:  rgb(0, 0, 0);
+      --fg: tomato;
+    }
+    ::selection {
+      color: rgb(255, 255, 255);
+    }
+    body {
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+  
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+    cursor: cell;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main {
+    margin: 1em;
+    max-width: 260px;
+    position: relative;
+    top: -10vh;
+  }
+  
+  .main>* {
+    margin: 1em 0em;
+  }
+  
+  p,div {
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: 700;
+  }
+  #name{
+    color: beige;
+  }
+  #name:hover{
+    color: tomato;
+  }
+  #name::selection{
+    color: gray;
+  }
+  a {
+    color: inherit;
+    opacity: 0.6;
+    transition: opacity 0.1s;
+  }
+  
+  a:hover {
+    opacity: 1;
+  }

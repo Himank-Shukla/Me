@@ -1,0 +1,82 @@
+
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="google" content="notranslate">
+    
+      <title>Himank Shukla</title>
+      <meta name="author">
+      <meta name="description">
+    
+      <link rel="icon" sizes="192x192" href="logo.png">
+      <link rel="apple-touch-icon" href="logo.png">
+    
+      <link rel="stylesheet" href="style.css"/>
+    
+      <script type="text/javascript">document.addEventListener("touchstart", function () { }, true);</script>
+    
+    </head>
+    
+    <body>
+    
+      <div class="main">
+    
+        <p>Hey, I'm <span id="name">Himank</span><span id="icon"> ㋡</span> </p>
+    
+        <p>
+          <div id="role"></div>
+        </p>
+    
+        <p>You can find me on <a href="https://github.com/Himank-Shukla">Github</a>.</p>
+    
+        <p>I'm also on <a href="https://linkedin.com/in/himank-shukla-64534b171/">Linkedin</a>.</p>
+    
+        <p>Or just send me some <a id="mail" href="mailto:himankshukla808@gmail.com" onmouseover="mail()" ontouchstart="mail()">mail</a>.</p>
+    
+      </div>
+    
+      <script>
+    
+        const sleep = m => new Promise(r => setTimeout(r, m));
+    
+        const mail = () => {
+    
+          let element = document.querySelector("#mail")
+          element.href = element.href.replace("@@", ".")
+    
+        }
+    
+        const main = async () => {
+    
+          await sleep(1500)
+    
+          document.querySelector("#icon").innerHTML = "."
+    
+          await sleep(1000)
+    
+          let element = document.querySelector("#name")
+          let text = ' Shukla';
+    
+          for (i = 0; i < text.length; i++) {
+            element.innerHTML += text.charAt(i);
+            await sleep(100)
+          }
+          let e = document.querySelector("#role")
+          let t = 'I am a Software Engineer.';
+    
+          for (i = 0; i < t.length; i++) {
+            e.innerHTML += t.charAt(i);
+            await sleep(100)
+          }
+          
+        }
+    
+        main()
+      
+      </script>
+    
+    </body>
+    
+    </html>
